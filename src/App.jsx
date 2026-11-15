@@ -5,6 +5,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import { FarmProvider } from './contexts/FarmContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ChatBot from './components/ChatBot';
 import Dashboard from './pages/Dashboard';
 import MyFarm from './pages/MyFarm';
 import ClimateInsights from './pages/ClimateInsights';
@@ -39,6 +40,7 @@ export default function App() {
                 </Routes>
               </main>
               <Footer />
+              <ChatBot />
             </div>
           </FarmProvider>
         </LocationProvider>

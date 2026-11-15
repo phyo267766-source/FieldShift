@@ -20,6 +20,7 @@ from routes.rotation_routes import rotation_bp
 from routes.report_routes import report_bp
 from routes.weather_routes import weather_bp
 from routes.notification_routes import notification_bp
+from routes.chat_routes import chat_bp
 
 
 def create_app(config_class=Config):
@@ -40,6 +41,7 @@ def create_app(config_class=Config):
     app.register_blueprint(report_bp)
     app.register_blueprint(weather_bp)
     app.register_blueprint(notification_bp)
+    app.register_blueprint(chat_bp)
 
     # Health check / API info
     @app.route('/api', methods=['GET'])

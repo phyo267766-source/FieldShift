@@ -165,6 +165,17 @@ export const weatherApi = {
     apiRequest(`/api/weather/forecast/daily?lat=${lat}&lon=${lon}&days=${days}`),
 };
 
+// ── Chat API (Agricultural Chatbot) ────────────────────────────────────────
+
+export const chatApi = {
+  /** Send a message to the farming assistant */
+  send: (message, context = null) =>
+    apiRequest('/api/chat', {
+      method: 'POST',
+      body: JSON.stringify({ message, context }),
+    }),
+};
+
 // ── Report API ──────────────────────────────────────────────────────────────
 
 export const reportApi = {
@@ -224,6 +235,7 @@ export default {
   climateApi,
   weatherApi,
   rotationApi,
+  chatApi,
   reportApi,
   notificationApi,
 };
